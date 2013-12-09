@@ -42,8 +42,12 @@ module Xmlenc
 
     private
 
+    # def referenced_node
+    #   document.at_xpath("//xenc:EncryptedData[@Id='#{reference_uri}']", NAMESPACES)
+    # end
+
     def referenced_node
-      document.at_xpath("//xenc:EncryptedData[@Id='#{reference_uri}']", NAMESPACES)
+      document.at_xpath("//xenc:EncryptedData", NAMESPACES)
     end
 
     def reference_uri
