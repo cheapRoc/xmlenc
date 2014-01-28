@@ -12,6 +12,7 @@ module Xmlenc
       def decrypt(cipher_value, options = {})
         cipher.decrypt
         cipher.key = @key
+        cipher.padding = 0
         cipher.iv  = cipher_value[0...iv_len]
         cipher.update(cipher_value[iv_len..-1]) << cipher.final
       end
