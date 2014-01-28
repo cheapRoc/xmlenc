@@ -17,3 +17,5 @@ test/version_tmp
 tmp
 .idea
 bin/
+vendor/
+.ruby-version
